@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReceiveMsgTableCell" rowHeight="66" id="JsY-rH-Iu7" customClass="ReceiveMsgTableCell" customModule="ChatBot" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JsY-rH-Iu7" id="ykg-2E-Koy">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cNd-Gn-ErH">
+                        <rect key="frame" x="8" y="8" width="240" height="49"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3T-ym-hCM">
+                                <rect key="frame" x="8" y="8" width="224" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="T3T-ym-hCM" secondAttribute="bottom" constant="8" id="5Cp-6B-9sc"/>
+                            <constraint firstItem="T3T-ym-hCM" firstAttribute="leading" secondItem="cNd-Gn-ErH" secondAttribute="leading" constant="8" id="Jro-GO-1oa"/>
+                            <constraint firstItem="T3T-ym-hCM" firstAttribute="top" secondItem="cNd-Gn-ErH" secondAttribute="top" constant="8" id="Okv-0P-zkH"/>
+                            <constraint firstAttribute="trailing" secondItem="T3T-ym-hCM" secondAttribute="trailing" constant="8" id="igg-7s-VOy"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="cNd-Gn-ErH" secondAttribute="bottom" constant="8" id="3dA-O0-Vk9"/>
+                    <constraint firstItem="cNd-Gn-ErH" firstAttribute="leading" secondItem="ykg-2E-Koy" secondAttribute="leading" constant="8" id="9Bn-Be-T6l"/>
+                    <constraint firstItem="cNd-Gn-ErH" firstAttribute="top" secondItem="ykg-2E-Koy" secondAttribute="top" constant="8" id="bbn-F3-gey"/>
+                    <constraint firstAttribute="trailing" secondItem="cNd-Gn-ErH" secondAttribute="trailing" constant="127" id="by6-wh-32d"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="backView" destination="cNd-Gn-ErH" id="hMY-zG-Ydw"/>
+                <outlet property="txtLabel" destination="T3T-ym-hCM" id="3XM-Wy-jT5"/>
+            </connections>
+            <point key="canvasLocation" x="18.5" y="-41"/>
+        </tableViewCell>
+    </objects>
+</document>
