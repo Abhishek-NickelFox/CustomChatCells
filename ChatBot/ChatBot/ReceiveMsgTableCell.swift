@@ -37,10 +37,10 @@ class ReceiveMsgTableCell: BotCell {
 
     func setUpCellUI() {
         
-        let bgLayer = gradientColor.gradientLayer
-        bgLayer.frame = backView.bounds
-        
-        backView.layer.insertSublayer(bgLayer, at: 0)
+//        let bgLayer = gradientColor.gradientLayer // Not Required here
+//        bgLayer.frame = backView.bounds
+//        
+//        backView.layer.insertSublayer(bgLayer, at: 0)
         backView.setRoundedConrners(corners: [.bottomRight, .topLeft, .topRight], radius: 15)
         backView.layer.masksToBounds = true
     }

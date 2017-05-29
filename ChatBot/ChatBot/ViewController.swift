@@ -36,18 +36,21 @@ class ViewController: UIViewController {
         msgArray?.append(CellModel(text: sendTxtView.text, contentType: 2))
         botTableView.reloadData()
         
-        DispatchQueue.main.async {
+//        DispatchQueue.main.async {
             self.moveTableView()
-        }
+//        }
     }
     
     func moveTableView() {
         
-        if (botTableView.contentSize.height > botTableView.frame.size.height)
-        {
-            let offSet = CGPoint(x: 0, y: botTableView.contentSize.height - botTableView.frame.size.height)
-            botTableView.setContentOffset(offSet, animated: true)
-        }
+//        if (botTableView.contentSize.height > botTableView.frame.size.height) // DIDn't know why its not working :(
+//        {
+//            let offSet = CGPoint(x: 0, y: botTableView.contentSize.height - botTableView.frame.size.height)
+//            botTableView.setContentOffset(offSet, animated: true)
+//        }
+        
+        let indexpath = IndexPath(row: (msgArray?.count)! - 1, section: 0)
+        botTableView.scrollToRow(at: indexpath, at: .top, animated: true)
     }
     
 }
@@ -97,7 +100,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier) as! BotCell
         cell.cellData = model
         return cell
-
     }
 }
 

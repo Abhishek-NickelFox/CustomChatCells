@@ -32,6 +32,15 @@ class GradientColor {
         gradientLayer.locations = [0.0, 1.0]
     }
     
+    init(topColor: UIColor, bottomColor: UIColor) {
+        
+        gradientLayer = CAGradientLayer()
+        let color1 = topColor.cgColor
+        let color2 = bottomColor.cgColor
+        gradientLayer.colors = [color1, color2]
+        gradientLayer.locations = [0.0, 1.0]
+    }
+    
 }
 
 extension UIView {
