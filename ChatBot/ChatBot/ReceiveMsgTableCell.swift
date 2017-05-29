@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReceiveMsgTableCell: UITableViewCell {
+class ReceiveMsgTableCell: BotCell {
 
     @IBOutlet weak var txtLabel: UILabel!
     @IBOutlet weak var backView: UIView!
@@ -28,6 +28,11 @@ class ReceiveMsgTableCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    override func configure(cellData: Any?) {
+        guard let celldata = cellData as? CellModel else { return }
+        txtLabel.text = celldata.text
     }
 
     func setUpCellUI() {

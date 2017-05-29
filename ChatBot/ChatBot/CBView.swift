@@ -47,3 +47,31 @@ extension UIView {
         self.layer.mask = mask
     }
 }
+
+class BotCell: UITableViewCell {
+    
+    var cellData: Any? {
+        
+        didSet{
+            configure(cellData: cellData)
+        }
+    }
+    
+    func configure(cellData: Any?) {
+    
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+
+    }
+    
+    override func draw(_ rect: CGRect) {
+
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+    
+}

@@ -86,16 +86,18 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         let model = (msgArray?[indexPath.row])! as CellModel
 
-        if model.contentType == 1 { /* SendMsgTableCell.defaultReuseIdentifier */
-            let sendCell = tableView.dequeueReusableCell(withIdentifier: "SendMsgTableCell") as! SendMsgTableCell
-            sendCell.txtLabel.text = model.text
-            return sendCell
+        var identifier = ""
+        if model.contentType == 1 {
+            identifier =  "SendMsgTableCell"
         }
         else {
-            let receiveCell = tableView.dequeueReusableCell(withIdentifier: "ReceiveMsgTableCell") as! ReceiveMsgTableCell
-            receiveCell.txtLabel.text = model.text
-            return receiveCell
+            identifier =  "ReceiveMsgTableCell"
         }
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier) as! BotCell
+        cell.cellData = model
+        return cell
+
     }
 }
 
